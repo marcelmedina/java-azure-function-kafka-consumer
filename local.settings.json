@@ -1,0 +1,12 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "java",
+    "BrokerList": "yourserver:9092",
+    "ConfluentCloudUsername": "your_username",
+    "ConfluentCloudPassword": "your_password",
+    "topic": "topic1",
+    "topic-output": "topic2"
+  }
+}
