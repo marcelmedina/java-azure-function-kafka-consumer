@@ -23,7 +23,7 @@ public class Function {
     }
 
     @FunctionName("KafkaTriggerExponentialRetry")
-    @ExponentialBackoffRetry(maxRetryCount = -1, minimumInterval = "00:00:05", maximumInterval = "00:01:00")
+    @ExponentialBackoffRetry(maxRetryCount = 3, minimumInterval = "00:00:05", maximumInterval = "00:01:00")
     public void runExponentialRetry(
             @KafkaTrigger(name = "KafkaTriggerExponentialRetry", topic = "%topic-output%", brokerList = "%BrokerList%", consumerGroup = "$Default", username = "ConfluentCloudUsername", password = "%ConfluentCloudPassword%", authenticationMode = BrokerAuthenticationMode.PLAIN, protocol = BrokerProtocol.SASLSSL, dataType = "string") String kafkaEventData,
             final ExecutionContext context) throws Exception {
